@@ -1,0 +1,37 @@
+name: "Rogue Society"
+author: "Aerys"
+category: Misc
+description: "A Rogue Developer in our society left and decided to create his own society, he called it KHK, whatever that stands for.
+
+The brilliant hackers in our society managed to track him down and get a hold of his laptop.
+
+apparently he stole a flag from us and hid its parts among his files.
+
+but we could only find a CTF poster on his laptop.
+
+Can you find the flag?.
+
+\n\n__Author__: Aerys"
+value: 500 (Constant bcz we will use linear decay)
+type: file png
+
+extra:
+    initial: 500
+    decay: <Will be linear>
+    minimum: 100
+    image: NONE
+    port: NONE
+    command: ""
+    volumes: ""
+    ctype: "static"
+image: "NONE"
+flags:
+    - {
+        type: "static", // Regex is must
+        content: " CHC{H1DD3N_FL4G_1NS1D3_F0RB1DD3N_C0L0R5}",
+        data: "case_insensitive", // all flags must be case insensitive unless needed
+    }
+
+files:
+   - dist/poster.png
+
