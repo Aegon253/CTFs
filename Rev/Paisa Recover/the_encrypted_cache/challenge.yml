@@ -1,0 +1,34 @@
+name: "Paisa Recover"
+author: "Aerys"
+category: Rev
+description: "A scammer stole some money from Mr.FANG, we managed to track down the scammer (levi) and get an image of his PC, but it only has a few files, 1.some victim files, 2. a banking app and another file.
+logon to the scammers device to send the money back to Mr.FANG. We already have his account Name (FANG). The scammer mustve been a close freind because Mr.FANG had this to say about him.\n 
+
+"Tum hi se wabasta he ye umeed ay bashar e bad-ghumaan
+Agar Tum hi bhool jao to kider jaynge hum 
+Tum sath ho chal rhe hain zindagi ki raaho pr 
+Aik tum hi hath chordo to kider jaynge hum" 
+\n\n__Author__: Aerys"
+value: 400 (Constant bcz we will use linear decay)
+type: file elf
+
+extra:
+    initial: 400
+    decay: <Will be linear>
+    minimum: 50
+    image: NONE
+    port: NONE
+    command: ""
+    volumes: ""
+    ctype: "static"
+image: "NONE"
+flags:
+    - {
+        type: "static", // Regex is must
+        content: "CCC{P4ym3nt_170003_5ucc3sfu1_d87dc2090f3a1c5f8a608da82af5e0db}",
+        data: "case_sensitive", // all flags must be case insensitive unless needed
+    }
+
+files:
+   - dist/bank
+

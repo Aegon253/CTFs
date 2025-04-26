@@ -1,0 +1,7 @@
+Open the file in procmon
+
+apply the file modification to get the path of the malicious exe file.
+scroll further down and youll see a file named Thr33_arms.txt, thats the attackers file since it follows the ben10 theme sort of. goto its properties to get the parent PID
+
+now to get the name of the modification we need to look at the registry, in order to maintain persistence, the attacker hid something in the run folder in registry. use a filter and youll see an entry for the malicious file
+and youll complete the challenge.

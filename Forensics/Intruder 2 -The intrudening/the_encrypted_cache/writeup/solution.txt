@@ -1,0 +1,14 @@
+goto network tab and we can see 2 conenctions to internal network IPs, 192.168.64.142 - check its port number
+
+in file changes filter we see an exe with PDF icon - its fullname
+
+in networksork tab again - filter the ip found earlier 192.168.64.142 and see which process uses it
+
+follow the time stamps and see which files did the pdf drop among them is a powershell script.
+
+filter "path contains Zoom" there u can see the file in the beginning, name makes it obvious.
+
+once the keystroke file is found check when it was created and see the Parent PID
+
+find the location of the logger then apply filter for that path and u will find the injector file, check its full path.
+

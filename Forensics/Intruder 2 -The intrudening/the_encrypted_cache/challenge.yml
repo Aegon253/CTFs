@@ -1,0 +1,57 @@
+name: "Intruder 2: The Intrudening"
+author: "Aerys"
+category: Forensics
+description: "Who needs persistence when you have clueless employees. gaining access to the local network yet again.
+
+This time the attacker did more than just leave a message.
+
+When the employee clicked a link on what he thought was an Omnitrix giveaway site, he installed a harmless looking pdf file and opened it, granting the attacker acccess to the machine.
+
+A carefully placed script he ran allowed him to download malicious SUS files into the victim machine, allowing him to capture keystrokes and whatnot.
+
+Then he injected the malicious files into legitimate softwares compromising their use and ensure that they keep running.
+
+The Employee responsible was executed.
+
+Our Forensics team managed to stop the attack and gather information on the system but even they couldn't uncover the vastness of the damage done, maybe you can.
+
+Find out 
+
+Through which port did the attacker maintain remote access?
+Which malicious file, disguised as a PDF, did the employee download?
+Which reverse_tcp file communicated with the attacker?
+Which shell script did the attacker use to transfer malicious libraries?
+Which sneaky DLL file did the attacker drop among Zoom files?
+What is the parent PID of the process that created the file where the keystrokes were saved?
+Which legitimate process was used to run the keylogger?
+A file in the same directory as the keylogger was used to inject malicious DLLs into processes, what is its full path?
+
+Note: write all filenames and process names with the extension
+
+flag format: CHC{port_fileName_revTCPname_scriptName_dllName_PID_processName_Path}
+
+\n\n__Author__: Aerys"
+value: 400 (Constant bcz we will use linear decay)
+type: file PML
+
+extra:
+    initial: 400
+    decay: <Will be linear>
+    minimum: 50
+    image: NONE
+    port: NONE
+    command: ""
+    volumes: ""
+    ctype: "static"
+image: "NONE"
+flags:
+    - {
+        type: "static", // Regex is must
+        content: "CHC{5539_someoneHEHE.exe_badla.exe_intruude.ps1_sn34ky.dll_2868_notepad.exe_C:\Windows\Logs\sys_inj.exe}",
+        data: "case_insensitive", // all flags must be case insensitive unless needed
+        
+    }
+
+files:
+   - dist/The_Return.PML
+

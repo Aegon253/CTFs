@@ -1,0 +1,45 @@
+name: "Chernobyl"
+author: "Aerys"
+category: Rev
+description: "The control room is in chaos. Red warning lights flicker against the dim walls as sirens howl through the air. Engineers rush back and forth, their voices drowned out by the deafening alarm.
+
+Through the reinforced glass, Reactor No. 4 looms, its core pulsating with an ominous glow. Steam billows from the pressure valves, filling the room with a suffocating heat.
+
+Numbers and error messages flood the control panel:
+
+"Coolant levels dropping..."
+"Core temperature rising... UNSTABLE"
+"Emergency shutdown sequence: ENGAGED"
+"CRITICAL FAILURE IMMINENT."
+The system is failing. The automatic safety mechanisms are unresponsive. The final emergency be activated manually.
+
+Sweat drips from your forehead as you reach for the controls, but something isn't right. The reactor refuses to comply. The console’s screen flashes, demanding further action. The clock is ticking.
+
+You don’t have time to hesitate. Every second brings the core closer to meltdown.
+
+You need to find a way. Now.
+
+\n\n__Author__: Aerys"
+value: 300 (Constant bcz we will use linear decay)
+type: file elf
+
+extra:
+    initial: 300
+    decay: <Will be linear>
+    minimum: 50
+    image: NONE
+    port: NONE
+    command: ""
+    volumes: ""
+    ctype: "static"
+image: "NONE"
+flags:
+    - {
+        type: "static", // Regex is must
+        content: "CHC{r3act0r_Scr4mm3D_Succe55Fu11y}",
+        data: "case_sensitive", // all flags must be case insensitive unless needed
+    }
+
+files:
+   - dist/chernobyl
+

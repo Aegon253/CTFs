@@ -1,0 +1,41 @@
+name: "Intruder"
+author: "Aerys"
+category: Forensics
+description: "An attacker managed to intrude our local network and send suspicious links to most of our employees. One of them clicked it and downloaded a suspicious file and even ran it.
+
+The file happened to contain a malicious exe,this granted the attacker acces to out system.
+
+The attacker only left a message in a file and made changes to ensure persistence.
+
+We managed to get a hold of the attackers activities, Your job is to find out. 
+
+Where was the malicious executable stored(Dir name) ?
+In which file did the attacker leave his message? And what is the parent PID of that process
+What is the name of the modification he made to ensure persistence and on for what file?
+
+flag format: CHC{Foldername_filename_parentPID_modificationname_targetfile}
+
+\n\n__Author__: Aerys"
+value: 300 (Constant bcz we will use linear decay)
+type: file PML
+
+extra:
+    initial: 300
+    decay: <Will be linear>
+    minimum: 50
+    image: NONE
+    port: NONE
+    command: ""
+    volumes: ""
+    ctype: "static"
+image: "NONE"
+flags:
+    - {
+        type: "static", // Regex is must
+        content: " CHC{ProgramData_Thr33_arms.txt_3364_Omnitr1x_ben14.exe}",
+        data: "case_insensitive", // all flags must be case insensitive unless needed
+    }
+
+files:
+   - dist/Its_Hero_time.PML
+
