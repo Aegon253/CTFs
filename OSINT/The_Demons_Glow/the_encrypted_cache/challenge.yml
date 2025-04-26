@@ -1,0 +1,43 @@
+name: "The Demon’s Glow"
+author: "Aerys"
+category: OSINT
+description: "This man witnesses a criticality, saw cherenkovs light, experiencing a gradual breakdown of his body's systems. Over time, his organs failed and his flesh deteriorated.
+
+His Coworker even cried blood. After days of agony, he succumbed, his body decaying long before death. 
+
+whats this man's name?
+
+and after how much time since the incident did he die?
+
+how much exposure did he have in rad?
+
+and how old was his supervisor at the time?
+
+difficulty - very easy
+
+flag format: CHC{fisrtname_lastname_timetilldeath_exposure_age}
+
+\n\n__Author__: Aerys"
+
+value: 100 (Constant bcz we will use linear decay)
+type: 
+
+extra:
+    initial: 100
+    decay: <Will be linear>
+    minimum: 20
+    image: NONE
+    port: NONE
+    command: ""
+    volumes: ""
+    ctype: "static"
+image: "NONE"
+flags:
+    - {
+        type: "static", // Regex is must
+        content: "CHC{masato_shinohara_210_1000_54}",
+        data: "case_insensitive", // all flags must be case insensitive unless needed
+    }
+
+files:
+
